@@ -18,7 +18,7 @@ class Totals {
     if (totalStorePrice == 0) {
       return 0;
     }
-    return totalCraftingPrice - totalStorePrice;
+    return totalStorePrice-totalCraftingPrice;
   }
   Totals(this.totalQuantity, this.totalCraftingPrice, this.totalStorePrice, this.ingredients);
 }
@@ -133,5 +133,138 @@ class GigatonBall extends CraftableItem {
           ],
           0,
           Image.asset('assets/craftable_items/GIGATONBALL.png'),
+        );
+}
+
+class FeatherBall extends CraftableItem {
+  FeatherBall()
+      : super(
+          'Feather Ball',
+          [
+            IngredientQuantity(Apricorn(), 1),
+            IngredientQuantity(SkyTumblestone(), 1),
+          ],
+          140,
+          Image.asset('assets/craftable_items/FEATHERBALL.png'),
+        );
+}
+
+class WingBall extends CraftableItem {
+  WingBall()
+      : super(
+          'Wing Ball',
+          [
+            IngredientQuantity(Apricorn(), 1),
+            IngredientQuantity(SkyTumblestone(), 1),
+            IngredientQuantity(IronChunk(), 1),
+          ],
+          340,
+          Image.asset('assets/craftable_items/WINGBALL.png'),
+        );
+}
+
+class JetBall extends CraftableItem {
+  JetBall()
+      : super(
+          'Jet Ball',
+          [
+            IngredientQuantity(Apricorn(), 1),
+            IngredientQuantity(SkyTumblestone(), 2),
+            IngredientQuantity(IronChunk(), 2),
+          ],
+          0,
+          Image.asset('assets/craftable_items/JETBALL.png'),
+        );
+}
+
+class MushroomCake extends CraftableItem {
+  MushroomCake()
+      : super(
+          'Mushroom Cake',
+          [
+            IngredientQuantity(SpringyMushroom(), 1),
+            IngredientQuantity(LureBase(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/MUSHROOMCAKE.png'),
+        );
+}
+
+class HoneyCake extends CraftableItem {
+  HoneyCake()
+      : super(
+          'Honey Cake',
+          [
+            IngredientQuantity(DazzlingHoney(), 1),
+            IngredientQuantity(LureBase(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/HONEYCAKE.png'),
+        );
+}
+
+class GrainCake extends CraftableItem {
+  GrainCake()
+      : super(
+          'Grain Cake',
+          [
+            IngredientQuantity(HeartyGrains(), 1),
+            IngredientQuantity(LureBase(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/GRAINCAKE.png'),
+        );
+}
+
+class BeanCake extends CraftableItem {
+  BeanCake()
+      : super(
+          'Bean Cake',
+          [
+            IngredientQuantity(PlumpBeans(), 1),
+            IngredientQuantity(LureBase(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/BEANCAKE.png'),
+        );
+}
+
+class SaltCake extends CraftableItem {
+  SaltCake()
+      : super(
+          'Salt Cake',
+          [
+            IngredientQuantity(LureBase(), 1),
+            IngredientQuantity(CrunchySalt(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/SALTCAKE.png'),
+        );
+}
+
+
+class SmokeBomb extends CraftableItem {
+  SmokeBomb()
+      : super(
+          'Smoke Bomb',
+          [
+            IngredientQuantity(SootfootRoot(), 1),
+            IngredientQuantity(CasterFern(), 1),
+          ],
+          400,
+          Image.asset('assets/craftable_items/SMOKEBOMB.png'),
+        );
+}
+
+class ScatterBang extends CraftableItem {
+  ScatterBang()
+      : super(
+          'Scatter Bang',
+          [
+            IngredientQuantity(PopPod(), 1),
+            IngredientQuantity(CasterFern(), 1),
+          ],
+          500,
+          Image.asset('assets/craftable_items/SCATTERBANG.png'),
         );
 }

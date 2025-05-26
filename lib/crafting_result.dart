@@ -152,7 +152,7 @@ class CraftingResultDialog extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     Text(
-                      'Profit/Loss (Delta): ${totals.deltaPrice} ₽',
+                      'Savings (Delta): ${totals.deltaPrice} ₽',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: totals.deltaPrice > 0 ? Colors.green : Colors.red,
                             fontWeight: FontWeight.bold,

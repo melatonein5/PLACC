@@ -72,7 +72,13 @@ class _MyHomePageState extends State<MyHomePage> {
   */
   //
   List<CraftableItem> craftableItems = [
-    PokeBall()
+    PokeBall(),
+    GreatBall(),
+    UltraBall(),
+    HeavyBall(),
+    LeadenBall(),
+    GigatonBall(),
+    
   ];
 
   @override

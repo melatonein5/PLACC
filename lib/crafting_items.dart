@@ -33,7 +33,7 @@ class BlackTumblestone extends CraftingItem {
       : super(
           'Black Tumblestone',
           80,
-          Image.asset('assets/crafting_items/BLACK_TUMBLESTONE.png'),
+          Image.asset('assets/crafting_items/BLACKTUMBLESTONE.png'),
         );
 }
 
@@ -42,7 +42,7 @@ class SkyTumblestone extends CraftingItem {
       : super(
           'Sky Tumblestone',
           100,
-          Image.asset('assets/crafting_items/SKY_TUMBLESTONE.png'),
+          Image.asset('assets/crafting_items/SKYTUMBLESTONE.png'),
         );
 }
 
@@ -51,16 +51,16 @@ class IronChunk extends CraftingItem {
       : super(
           'Iron Chunk',
           200,
-          Image.asset('assets/crafting_items/IRON_CHUNK.png'),
+          Image.asset('assets/crafting_items/IRONCHUNK.png'),
         );
 }
 
 class LureBase extends CraftingItem {
   LureBase()
       : super(
-          'Lure Base',
+          'Cake-Lure Base',
           100,
-          Image.asset('assets/crafting_items/LURE_BASE.png'),
+          Image.asset('assets/crafting_items/CAKELUREBASE.png'),
         );
 }
 
@@ -69,7 +69,7 @@ class SpringyMushroom extends CraftingItem {
       : super(
           'Springy Mushroom',
           200,
-          Image.asset('assets/crafting_items/SPRINGY_MUSHROOM.png'),
+          Image.asset('assets/crafting_items/SPRINGYMUSHROOM.png'),
         );
 }
 
@@ -78,7 +78,7 @@ class DazzlingHoney extends CraftingItem {
       : super(
           'Dazzling Honey',
           200,
-          Image.asset('assets/crafting_items/DAZZLING_HONEY.png'),
+          Image.asset('assets/crafting_items/DAZZLINGHONEY.png'),
         );
 }
 
@@ -87,7 +87,7 @@ class HeartyGrains extends CraftingItem {
       : super(
           'Hearty Grains',
           200,
-          Image.asset('assets/crafting_items/HEARTY_GRAINS.png'),
+          Image.asset('assets/crafting_items/HEARTYGRAINS.png'),
         );
 }
 
@@ -96,7 +96,7 @@ class PlumpBeans extends CraftingItem {
       : super(
           'Plump Beans',
           200,
-          Image.asset('assets/crafting_items/PLUMP_BEANS.png'),
+          Image.asset('assets/crafting_items/PLUMPBEANS.png'),
         );
 }
 
@@ -105,7 +105,7 @@ class CrunchySalt extends CraftingItem {
       : super(
           'Crunchy Salt',
           200,
-          Image.asset('assets/crafting_items/CRUNCHY_SALT.png'),
+          Image.asset('assets/crafting_items/CRUNCHYSALT.png'),
         );
 }
 
@@ -114,7 +114,7 @@ class CasterFern extends CraftingItem {
       : super(
           'Caster Fern',
           140,
-          Image.asset('assets/crafting_items/CASTER_FERN.png'),
+          Image.asset('assets/crafting_items/CASTERFERN.png'),
         );
 }
 
@@ -123,7 +123,7 @@ class SootfootRoot extends CraftingItem {
       : super(
           'Sootfoot Root',
           300,
-          Image.asset('assets/crafting_items/SOOTFOOT_ROOT.png'),
+          Image.asset('assets/crafting_items/SOOTFOOTROOT.png'),
         );
 }
 
@@ -132,6 +132,6 @@ class PopPod extends CraftingItem {
       : super(
           'Pop Pod',
           400,
-          Image.asset('assets/crafting_items/POP_POD.png'),
+          Image.asset('assets/crafting_items/POPPOD.png'),
         );
 }
