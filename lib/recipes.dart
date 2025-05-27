@@ -1,5 +1,8 @@
+// placc/recipes.dart
+
 import "package:flutter/widgets.dart";
 import "package:placc/crafting_items.dart";
+import "package:placc/models/craftable_item_type.dart"; // Adjust path if necessary
 
 class IngredientQuantity {
   final CraftingItem item;
@@ -28,10 +31,13 @@ class CraftableItem {
   final List<IngredientQuantity> ingredients;
   final Image icon;
   final int storePrice;
+  final List<CraftableItemType> itemTypes;
+
   int get craftingPrice => ingredients.fold(0, (sum, ingredient) => sum + ingredient.price);
   bool get buyable => storePrice > 0;
 
-  CraftableItem(this.name, this.ingredients, this.storePrice, this.icon);
+  CraftableItem(this.name, this.ingredients, this.storePrice, this.icon, {required this.itemTypes});
+
 
   Totals calculateTotalByBudget(int budget) {
     //Get the quantity by floor division of budget by crafting price
@@ -64,6 +70,7 @@ class PokeBall extends CraftableItem {
           ],
           100,
           Image.asset('assets/craftable_items/POKEBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -78,6 +85,7 @@ class GreatBall extends CraftableItem {
           ],
           300,
           Image.asset('assets/craftable_items/GREATBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -92,6 +100,7 @@ class UltraBall extends CraftableItem {
           ],
           600,
           Image.asset('assets/craftable_items/ULTRABALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -105,6 +114,7 @@ class HeavyBall extends CraftableItem {
           ],
           120,
           Image.asset('assets/craftable_items/HEAVYBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -119,6 +129,7 @@ class LeadenBall extends CraftableItem {
           ],
           320,
           Image.asset('assets/craftable_items/LEADENBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -133,6 +144,7 @@ class GigatonBall extends CraftableItem {
           ],
           0,
           Image.asset('assets/craftable_items/GIGATONBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -146,6 +158,7 @@ class FeatherBall extends CraftableItem {
           ],
           140,
           Image.asset('assets/craftable_items/FEATHERBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -160,6 +173,7 @@ class WingBall extends CraftableItem {
           ],
           340,
           Image.asset('assets/craftable_items/WINGBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -174,6 +188,7 @@ class JetBall extends CraftableItem {
           ],
           0,
           Image.asset('assets/craftable_items/JETBALL.png'),
+          itemTypes: [CraftableItemType.pokeball], // --- CHANGED ---
         );
 }
 
@@ -187,6 +202,7 @@ class MushroomCake extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/MUSHROOMCAKE.png'),
+          itemTypes: [CraftableItemType.cake], // --- CHANGED ---
         );
 }
 
@@ -200,6 +216,7 @@ class HoneyCake extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/HONEYCAKE.png'),
+          itemTypes: [CraftableItemType.cake], // --- CHANGED ---
         );
 }
 
@@ -213,6 +230,7 @@ class GrainCake extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/GRAINCAKE.png'),
+          itemTypes: [CraftableItemType.cake], // --- CHANGED ---
         );
 }
 
@@ -226,6 +244,7 @@ class BeanCake extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/BEANCAKE.png'),
+          itemTypes: [CraftableItemType.cake], // --- CHANGED ---
         );
 }
 
@@ -239,9 +258,9 @@ class SaltCake extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/SALTCAKE.png'),
+          itemTypes: [CraftableItemType.cake], // --- CHANGED ---
         );
 }
-
 
 class SmokeBomb extends CraftableItem {
   SmokeBomb()
@@ -253,6 +272,7 @@ class SmokeBomb extends CraftableItem {
           ],
           400,
           Image.asset('assets/craftable_items/SMOKEBOMB.png'),
+          itemTypes: [CraftableItemType.bomb], // --- CHANGED ---
         );
 }
 
@@ -261,10 +281,28 @@ class ScatterBang extends CraftableItem {
       : super(
           'Scatter Bang',
           [
-            IngredientQuantity(PopPod(), 1),
+            IngredientQuantity(SootfootRoot(), 1),
             IngredientQuantity(CasterFern(), 1),
+            IngredientQuantity(IronChunk(), 1),
           ],
           500,
           Image.asset('assets/craftable_items/SCATTERBANG.png'),
+          itemTypes: [CraftableItemType.bomb], // --- CHANGED ---
+        );
+}
+
+class OldGateau extends CraftableItem {
+  OldGateau()
+      : super(
+          'Old Gateau',
+          [
+            IngredientQuantity(DazzlingHoney(), 1),
+            IngredientQuantity(PlumpBeans(), 1),
+            IngredientQuantity(SootfootRoot(), 1),
+            IngredientQuantity(LureBase(), 1),
+          ],
+          0,
+          Image.asset('assets/craftable_items/OLDGATEAU.png'),
+          itemTypes: [CraftableItemType.cake, CraftableItemType.medicine], // --- CHANGED: Multiple types ---
         );
 }

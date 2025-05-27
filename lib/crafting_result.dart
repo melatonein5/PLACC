@@ -130,7 +130,7 @@ class CraftingResultDialog extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            '${ingredientTotalCost} ₽', // Total cost for this ingredient type
+                            '$ingredientTotalCost ₽', // Total cost for this ingredient type
                             style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
                           ),
                         ],
